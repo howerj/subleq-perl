@@ -21,7 +21,7 @@ for (my $file = shift; defined($file); $file = shift) { # LOAD ALL FILES
 	while (<$fh>) { chomp; push @m, split; }
 	close($fh);
 }
-for (my $c = 0; $c < $size; $c++) { # CORRECT IMAGE
+for (my $c = 0; $c < $size; $c++) { # CORRECT THE IMAGE
 	$m[$c] = 0 if (!defined $m[$c]);
 	$m[$c] = ($mask + $m[$c]) + 1 if ($m[$c] < 0);
 }
